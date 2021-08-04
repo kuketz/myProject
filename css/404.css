@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 100px 4fr repeat(2, 0) 1fr;
+  grid-column-gap: 2px;
+  grid-row-gap: 2px;
+}
+
+.header {
+    display: flex;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    height: 100px;
+    width: 100%;
+}
+
+.main {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+#myFooter {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.header {
+  display: flex;
+  position: relative;
+  width: 100%;
+  padding: 20px 10px;
+}
+.logo {
+  width: 20%;
+  position: relative;
+
+}
+
+.logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+nav {
+  width: 65%;
+  margin: 0 auto;
+  position: relative;
+}
+nav li {
+  height: auto;
+	width: 150px;
+	float: left;
+	text-align: center;
+	list-style: none;
+  font-family: 'Pattaya', sans-serif;
+	padding: 0;
+	margin: 0;
+	background-color: #eee;
+	border: 1px solid #ccc;
+	box-shadow: 0 1px 0 rgba(255,255,255, .9) inset, 0 1px 3px rgba(0,0,0, .1);
+	border-radius: 3px;
+  margin-left: 10px;
+  font-size: 20px;
+}
+nav a {
+	padding:13px;
+	text-decoration: none;
+	color:#333;
+	text-shadow: 0 1px #fff;
+	display: block;
+}
+nav li ul {
+	display: none;
+	height: auto;
+	margin-left: -11px;
+	padding: 0;
+}
+
+nav li:hover ul {
+	display: block;
+  }
+nav li:hover {
+  background-color: #f4511e;
+}
+nav li .dropdown-content li {
+	background-color: #f4511e;
+  border: 1px solid #ccc;
+}
+.dropdown-content li:hover {
+    background-color: #f4511e;
+}
+.dropdown-content::before {
+  content: '\00bb';
+  position: absolute;
+  transform: rotate(90deg);
+  opacity: 1;
+  margin: 10px 50px;
+}
+.bg {
+  height: 800px;
+  width: 100%;
+  background-image: url('../image/404.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.button {
+  display: inline-block;
+  position: relative;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  font-family: 'Pattaya', sans-serif;
+  padding: 20px;
+  width: 220px;
+  transition: 0.5s;
+  vertical-align: middle;
+  cursor: pointer;
+  margin: 5px;
+  top: 60%;
+  left: 60%;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  color: #fff;
+  }
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+#myFooter {
+    background-color: #3c3d41;
+    color: white;
+    padding-top: 20px;
+}
+.content{
+   flex: 1 1 auto;
+   min-height: 200px;
+   width: 100%;
+   padding: 0 15px;
+}
+
+#myFooter .footer-copyright {
+    background-color: #333333;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    text-align: center;
+}
+
+#myFooter .row {
+    display: flex;
+    justify-content: space-around;
+}
+
+#myFooter .footer-copyright p {
+    margin: 10px;
+    color: #ccc;
+}
+#myFooter .logo1 {
+  width: 200px;
+}
+
+#myFooter ul {
+    list-style-type: none;
+    padding-left: 0;
+    line-height: 2;
+}
+
+#myFooter h5 {
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+#myFooter h2 a{
+    font-size: 50px;
+    text-align: center;
+    color: black;
+}
+
+#myFooter a {
+    color: black;
+    text-decoration: none;
+    }
+
+#myFooter a:hover,
+#myFooter a:focus {
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+}
+.social-logo {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: baseline;
+  }
+.social-logo img {
+  width: 40px;
+}
+.social-logo a:hover {
+  transform: scale(1.5);
+}
+
+#map-container {
+    height: 240px;
+      width: 100%;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      border: 2px gray;
+}

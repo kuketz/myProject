@@ -367,3 +367,251 @@ input {
     opacity: 0.9;
     transition: background-color 0.2s;
 }
+@media screen and (min-width: 1024px) and (max-width: 1424px) {
+    #about {
+      height: 640px;
+    }
+    .a-left img {
+      width: 400px;
+    }
+    .about-top ul {
+      font-size: 14px;
+      padding: 0 40px;
+      margin: 0 auto;
+   }
+     .about-top ul li {
+      padding-left: 40px;
+    }
+    .review h3 {
+      font-size: 14px;
+      margin: 0;
+    }
+    .review img {
+        width: 50px;
+    }
+    .review p {
+        font-size: 12px;
+    }
+    .about-list {
+        padding-top: 10px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        align-content: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    nav li:hover ul {
+      display: none;
+    }
+    .dropdown-content::before {
+      content: none;
+    }
+}
+
+@media screen and (min-width: 740px) and (max-width: 1024px) {
+    .logo {
+      display: none;
+    }
+    .dropdown-content::before {
+      content: none;
+    }
+    nav {
+        top: 0;
+        right: 0;
+        position: inherit;
+        z-index: 2;
+        margin: 0 auto;
+    }
+    nav li:hover ul {
+      display: none;
+    }
+    .a-left {
+      display: none;
+    }
+    .about-top {
+        padding: 0 20px;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 100px auto auto;
+        grid-column-gap: 2px;
+        grid-row-gap: 2px;
+    }
+    .item-1 .h-back {
+        left: 37%;
+        top: 3%;
+        z-index: 10;
+    }
+    .about-list {
+      padding-top: 0;
+      justify-content: space-evenly;
+    }
+    .review h3 {
+      font-size: 16px;
+      margin: 0;
+    }
+    .review img {
+      width: 75px;
+    }
+    .review p {
+      font-size: 14px;
+    }
+    .callback {
+        padding: 10px 10px;
+    }
+    .mt h3 {
+        -webkit-text-stroke: 0;
+        font-size: 24px;
+    }
+    #myFooter h5 {
+        font-size: 18px;
+        color: black;
+        font-weight: bold;
+        margin-top: 0;
+    }
+    #myFooter a:hover,
+    #myFooter a:focus {
+        text-decoration: none;
+        color: red;
+        font-weight: normal;
+    }
+    .social-logo {
+      width: 90%;
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 770px) {
+      .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 100px auto auto;
+        grid-column-gap: 1px;
+        grid-row-gap: 1px;
+    }
+      .logo {
+        display: none;
+      }
+      .dropdown-content::before {
+        content: none;
+      }
+      nav {
+          top: 0;
+          right: 0;
+          position: inherit;
+          z-index: 2;
+          margin: 0 auto;
+      }
+      nav li:hover ul {
+        display: none;
+      }
+      .bg {
+          height: 400px;
+          width: 100%;
+      }
+      nav ul {
+         padding: 0;
+         margin: 0 auto;
+      }
+      nav li {
+          height: auto;
+          width: 75px;
+          padding: 0;
+          margin: 0 auto;
+          border-radius: 3px;
+          font-size: 14px;
+      }
+      .a-left {
+        display: none;
+      }
+      div.col-sm-3 {
+        display: none;
+      }
+      [class^="col-sm-"] {
+        text-align: center;
+      }
+      #myFooter h5 {
+          font-size: 18px;
+          color: black;
+          font-weight: bold;
+          margin-top: 0;
+      }
+      #myFooter a:hover,
+      #myFooter a:focus {
+          text-decoration: none;
+          color: red;
+          font-weight: normal;
+      }
+      #myFooter ul {
+        font-size: 14px;
+      }
+      .social-logo {
+        width: 90%;
+      }
+      .about-top {
+          padding: 0 4px;
+      }
+      h2.h-back {
+        display: none;
+      }
+      .item-1 h2 {margin: 0;}
+
+      .about-top ul {
+        padding: 0 20px;
+        font-size: 14px;
+      }
+      .about-top ul li {
+        padding-left: 30px;
+        background-image: url(../image/barbell.svg);
+        background-position: 2px 3px;
+        background-size: 18px;
+        background-repeat: no-repeat;
+        line-height: 1.5;
+      }
+      .review h3 {
+        font-size: 16px;
+        margin: 0;
+      }
+      .review img {
+        width: 50px;
+      }
+      .review p {
+        font-size: 14px;
+      }
+      #about {
+        height: auto;
+        overflow: inherit;
+    }
+      .about-list {
+        padding: 10px 10px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        align-content: stretch;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .about-list .review {
+        width: 100%;
+    }
+      .callback {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        text-align: center;
+        overflow: hidden;
+    }
+    .mt, .md {
+        width: 100%;
+    }
+    .mt h3 {
+        -webkit-text-stroke: 0;
+        font-size: 20px;
+    }
+    .mtb {
+      padding: 15px 10px;
+    }
+    #g {
+      display: none;
+    }
+}

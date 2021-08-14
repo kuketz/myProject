@@ -909,7 +909,7 @@ a.button14:active::before, a.button13:active:after {
        box-shadow: 0 1px 0 rgb(255 255 255 / 90%) inset, 0 1px 3px rgb(0 0 0 / 10%);
        border-radius: 3px;
        margin-left: 10px;
-       font-size: 18px;
+       font-size: 16px;
     }
    .dropdown-content::before {
      content: '\00bb';

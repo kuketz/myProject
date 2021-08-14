@@ -381,18 +381,18 @@ nav li .dropdown-content li {
     text-align: center;
   }
   #myFooter h5 {
-    font-size: 14px;
-    color: #fff;
-    font-weight: bold;
-    margin-top: 0;
-}
-#myFooter a:hover,
-#myFooter a:focus {
-    text-decoration: none;
-    color: red;
-    font-weight: normal;
-}
-.social-logo {
-  width: 90%;
-}
+      font-size: 14px;
+      color: #fff;
+      font-weight: bold;
+      margin-top: 0;
+  }
+  #myFooter a:hover,
+  #myFooter a:focus {
+      text-decoration: none;
+      color: red;
+      font-weight: normal;
+  }
+  .social-logo {
+    width: 90%;
+  }
 }

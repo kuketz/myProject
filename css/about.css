@@ -514,12 +514,13 @@ input {
          margin: 0 auto;
       }
       nav li {
-          height: auto;
-          width: 75px;
-          padding: 0;
-          margin: 0 auto;
-          border-radius: 3px;
-          font-size: 14px;
+        text-align: center;
+        margin: 0 auto;
+        height: auto;
+        width: 70px;
+        padding: 0;
+        border-radius: 3px;
+        font-size: 12px;
       }
       .a-left {
         display: none;
@@ -531,7 +532,7 @@ input {
         text-align: center;
       }
       #myFooter h5 {
-          font-size: 18px;
+          font-size: 14px;
           color: black;
           font-weight: bold;
           margin-top: 0;
@@ -545,6 +546,12 @@ input {
       #myFooter ul {
         font-size: 14px;
       }
+      .content {
+        flex: 1 1 auto;
+        min-height: 100px;
+        width: 100%;
+        padding: 0 15px;
+     }
       .social-logo {
         width: 90%;
       }

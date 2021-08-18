@@ -286,7 +286,7 @@ main {
 .team p {
   font-size: 14px;
   color: black;
-  font-weight: lighter;
+  font-weight: 300;
   padding: 10px;
   text-align: center;
 }
@@ -1154,10 +1154,12 @@ a.button14:active::before, a.button13:active:after {
      backface-visibility: none;
      background-color: #fff;
      transition: none;
-  }
+    }
    .description {
       padding: 0;
       transform: rotateY(0);
+      font-size: 14px;
+      padding: 5px 5px;
   }
     .description h3 {
       display: none;

@@ -539,6 +539,8 @@ a.button13:active:after {
 }
 #carouselExampleControls {
   background: linear-gradient(to top left, #ff0000 50%, #ffffff 50%);
+  padding-top: 50px!important;
+  padding-bottom: 50px!important;
 }
 #map-container {
   height: 240px;

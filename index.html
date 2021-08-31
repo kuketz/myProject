@@ -4,16 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Fitness Club</title>
+
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="image/favicon.ico" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-  <title>Fitness Club</title>
 
 </head>
 <body>
   <!-- НАвигация -->
-  <div class="container-fluid">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top overflow-hidden">
         <a class="navbar-brand top-menu" href="#">
           <img src="image\logoL.svg" alt="LogoGym" width="50" height="50" class="logo d-inline-block align-text-top">
           Fintess Club
@@ -22,7 +23,7 @@
           <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end " id="navbarNavDropdown">
-         <ul class="navbar-nav hide-on-med-and-down">
+         <ul class="navbar-nav hide-on-med-and-down overflow-hidden">
            <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Главная</a></li>
            <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#classes" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -50,7 +51,7 @@
   </header>
 
 <!-- Гланые блоки -->
-<main class="container-fluid">
+<main class="container">
   <!-- Блок карточки -->
   <div id="classes">
       <div class="item-1">
@@ -227,10 +228,10 @@
 
       <div class="content">
           <div class="row">
-              <div class="col-sm-3">
+              <div class="col colhide">
                 <img src="image/logoD.png" class="logo1">
               </div>
-              <div class="col-2 col-sm-2">
+              <div class="col">
                   <h5>Get started</h5>
                   <ul>
                       <li><a href="index.html">Главная</a></li>
@@ -238,7 +239,7 @@
                       <li><a href="#classes">Занятия</a></li>
                   </ul>
               </div>
-              <div class="col-2 col-sm-2">
+              <div class="col">
                   <h5>About us</h5>
                   <ul>
                       <li><a href="about.html">О нас</a></li>
@@ -246,7 +247,7 @@
                       <li><a href="#">Телефоны</a></li>
                   </ul>
               </div>
-              <div class="col-2 col-sm-2">
+              <div class="col">
                   <h5>Support</h5>
                   <ul>
                       <li><a href="#">FAQ</a></li>

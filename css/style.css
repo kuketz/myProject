@@ -916,7 +916,7 @@ a.button13:active:after {
     align-items: baseline;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 480px) {
+@media screen and (min-width: 320px) and (max-width: 479px) {
   .container {
     display: block;
   }
@@ -926,6 +926,15 @@ a.button13:active:after {
   #carouselExampleControls {
     background: none;
   }
+  #navbarNavDropdown {
+    padding: 10px 5px;
+  }
+  button.navbar-toggler {
+    margin: 0 auto!important;
+  }
+  .top-menu {
+    width: 100% !important;
+  }
   header {
     height: 600px;
   }
@@ -933,9 +942,6 @@ a.button13:active:after {
     display: none;
   }
   .dropdown {
-    display: none;
-  }
-  div.logo {
     display: none;
   }
   nav li {
@@ -957,31 +963,17 @@ a.button13:active:after {
     padding: 0;
     margin: 0 auto;
   }
-  div.sign {
-    width: 100%;
-    padding-top: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 600px;
-    background: url(../image/unsplash2.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    flex-wrap: nowrap;
-    align-content: center;
+  .overlay {
+    left: 0;
+    top: 70%;
   }
-  div.sign > span {
-    padding: 10px 0;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    font-size: 50px;
+  .sign_word h3 {
+    font-weight: 500!important;
+    font-size: 40px!important;
     text-align: center;
     text-transform: uppercase;
     line-height: 1;
-    color: #ff0000;
-    animation: none;
+    letter-spacing: 5px;
   }
   #classes,
   #trainers {
@@ -1018,15 +1010,15 @@ a.button13:active:after {
     flex-wrap: nowrap;
   }
   .circle-back {
-    width: 200px;
-    height: 200px;
+    width: 150px!important;
+    height: 150px!important;
     border-radius: 50%;
     background-image: linear-gradient(#ff0000, #ffd400);
     box-shadow: 4px 4px 6px 3px rgba(0, 0, 0, 0.12);
     position: absolute;
     opacity: 0.2;
-    top: 15%;
-    left: 10%;
+    top: 20%!important;
+    left: 20%!important;
   }
   #trainers::before {
     content: none;
@@ -1070,6 +1062,9 @@ a.button13:active:after {
   .card:hover .description {
     transform: rotateY(0);
   }
+  .carousel-inner {
+    width: 100%!important;
+  }
   .centered {
     width: 100%;
     display: flex;
@@ -1085,7 +1080,7 @@ a.button13:active:after {
     max-height: 150px;
     vertical-align: middle;
   }
-  div.col-sm-3 {
+  .colhide {
     display: none;
   }
   [class^="col-sm-"] {

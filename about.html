@@ -5,31 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/about.css">
+  <link rel="icon" href="image/favicon.ico" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
   <title>О нас</title>
 </head>
 <body>
-<div class="container">
-  <div class="header">
-      <div class="logo">
-        <img src="image\logoL.svg" alt="logo">
-      </div>
-      <nav>
-          <ul>
-              <li><a href="index.html">Главная</a></li>
-              <li class="dropdown-content"><a href="index.html#classes">Занятия</a>
-                  <ul class="dropdown">
-                      <li><a href="#trainers">Тренеры</a></li>
-                      <li><a href="#partner">Командные испытания</a></li>
-                      <li><a href="#gallery">Галлерея</a></li>
-                  </ul>
-              </li>
-            <li><a href="prices.html">Цены</a></li>
-            <li><a href="about.html">О нас</a></li>
-          </ul>
-      </nav>
-    </div>
-
-  <div class="main">
+  <!-- НАвигация -->
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand top-menu" href="#">
+          <img src="image\logoL.svg" alt="LogoGym" width="50" height="50" class="logo d-inline-block align-text-top">
+          Fintess Club
+        </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end " id="navbarNavDropdown">
+         <ul class="navbar-nav hide-on-med-and-down">
+           <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Главная</a></li>
+           <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#classes" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Меню
+              </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li class="mydrop"><a class="dropdown-item" href="#classes">Занятия</a></li>
+                  <li class="mydrop"><a class="dropdown-item" href="#trainers">Тренеры</a></li>
+                  <li class="mydrop"><a class="dropdown-item" href="#partner">Командные испытания</a></li>
+                  <li class="mydrop"><a class="dropdown-item" href="#carouselExampleControls">Галлерея</a></li>
+                </ul>
+           </li>
+          <li class="nav-item"><a class="nav-link" href="prices.html">Цены</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">О нас</a></li>
+         </ul>
+     </div>
+    </nav>
+  </div>
+<!-- Main content -->
+  <div class="container-fluid">
     <div id="about">
         <div class="a-left">
             <div class="ribbon"></div>
@@ -74,7 +87,7 @@
         <div class="mtb">
           <form role="form" action="register.php" method="post" enctype="plain">
             <input type="email" name="email" class="subscribe-input" placeholder="Enter your e-mail address..." required>
-            <button class='btn btn-conf btn-yel' type="submit">Отправить запрос</button>
+            <button class='btn-conf btn-yel' type="submit">Отправить запрос</button>
           </form>
         </div>
       </div>
@@ -83,74 +96,77 @@
       </div>
   </div>
 
-
-  <div id="g">
-    <div class="gcon">
-      <div class="row sponsor centered">
-        <div class="sm-2 col-sm-offset-1">
-          <img src="image/client1.png" alt="">
-        </div>
-        <div class="sm-2">
-          <img src="image/client3.png" alt="">
-        </div>
-        <div class="sm-2">
-          <img src="image/client2.png" alt="">
-        </div>
-        <div class="sm-2">
-          <img src="image/client4.png" alt="">
-        </div>
-        <div class="sm-2">
-          <img src="image/client5.png" alt="">
-        </div>
+<!-- Спонсоры -->
+<div id="g">
+  <div class="gcon row mx-auto">
+    <div class="col sponsor centered">
+      <div class="sm-2 col-sm-offset-1">
+        <img src="image/client1.png" alt="">
+      </div>
+      <div class="sm-2">
+        <img src="image/client3.png" alt="">
+      </div>
+      <div class="sm-2">
+        <img src="image/client2.png" alt="">
+      </div>
+      <div class="sm-2">
+        <img src="image/client4.png" alt="">
+      </div>
+      <div class="sm-2">
+        <img src="image/client5.png" alt="">
       </div>
     </div>
   </div>
 </div>
-  <footer id="myFooter">
-            <div class="content">
-                <div class="row">
-                    <div class="col-sm-3">
-                      <img src="image/Runner-PNG-Image-HD.png" class="logo1">
-                    </div>
-                    <div class="col-sm-2">
-                        <h5>Get started</h5>
-                        <ul>
-                            <li><a href="index.html">Главная</a></li>
-                            <li><a href="#">Регистрация</a></li>
-                            <li><a href="index.html#classes">Занятия</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-2">
-                        <h5>About us</h5>
-                        <ul>
-                            <li><a href="about.html">О нас</a></li>
-                            <li><a href="#">Цены</a></li>
-                            <li><a href="#">Телефоны</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-2">
-                        <h5>Support</h5>
-                        <ul>
-                            <li><a href="#">FAQ</a></li>
-                            <li><a href="#">Обратная связь</a></li>
-                        </ul>
-                    </div>
-                  </div>
+<!-- Футер -->
+<footer id="myFooter">
+  <!-- Карта -->
+  <iframe id="map-container" frameborder="0" style="border:0"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2079.0805232174866!2d37.82035594919902!3d48.96343838173665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40df87d785121027%3A0x297b7d2bb90391d4!2zwqvQodC_0LDRgNGC0LDCuw!5e0!3m2!1sru!2sua!4v1626866419374!5m2!1sru!2sua">
+  </iframe>
+      <div class="content">
+          <div class="row">
+              <div class="col colhide">
+                <img src="image/logoD.png" class="logo1">
+              </div>
+              <div class="col">
+                  <h5>Главное меню</h5>
+                  <ul>
+                      <li><a href="index.html">Главная</a></li>
+                      <li><a href="#">Регистрация</a></li>
+                      <li><a href="#classes">Занятия</a></li>
+                  </ul>
+              </div>
+              <div class="col">
+                  <h5>Меню связи</h5>
+                  <ul>
+                      <li><a href="about.html">О нас</a></li>
+                      <li><a href="prices.html">Цены</a></li>
+                      <li><a href="#">Телефоны</a></li>
+                  </ul>
+              </div>
+              <div class="col">
+                  <h5>Поддержка</h5>
+                  <ul>
+                      <li><a href="#">FAQ</a></li>
+                      <li><a href="#">Обратная связь</a></li>
+                  </ul>
+              </div>
             </div>
-            <div class="social-logo">
-                <a href="https://facebook.com"><img src="image/facebook.png" alt="Facebook Link"></a>
-                <a href="https://twitter.com"><img src="image/twitter.ico" alt="Twitter Link"></a>
-                <a href="https://aboutme.google.com"><img src="image/google-plus.ico" alt="Google Plus Link"></a>
-               <a href="https://youtube.com"><img src="image/youtube logo.ico" alt="Youtube Link"></a>
-                <a href="https://instagram.com"><img src="image/instagram.png" alt="Instagram Link"></a>
-            </div>
-            <iframe id="map-container" frameborder="0" style="border:0"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2079.0805232174866!2d37.82035594919902!3d48.96343838173665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40df87d785121027%3A0x297b7d2bb90391d4!2zwqvQodC_0LDRgNGC0LDCuw!5e0!3m2!1sru!2sua!4v1626866419374!5m2!1sru!2sua">
-            </iframe>
-            <div class="footer-copyright">
-                <p>&#169; 2021 Copyright </p>
-            </div>
-    </footer>
-</div>
+      </div>
+
+      <div class="social-logo">
+          <a href="https://facebook.com"><img width="50" height="50" class="logo d-inline-block align-text-top" src="image/facebook.png" alt="Facebook Link"></a>
+          <a href="https://twitter.com"><img width="50" height="50" class="logo d-inline-block align-text-top" src="image/twitter.svg" alt="Twitter Link"></a>
+          <a href="https://aboutme.google.com"><img width="50" height="50" class="logo d-inline-block align-text-top" src="image/google-plus.ico" alt="Google Plus Link"></a>
+          <a href="https://youtube.com"><img width="50" height="50" class="logo d-inline-block align-text-top" src="image/youtube.svg" alt="Youtube Link"></a>
+          <a href="https://instagram.com"><img width="50" height="50" class="logo d-inline-block align-text-top" src="image/instagram.png" alt="Instagram Link"></a>
+      </div>
+      <div class="footer-copyright">
+          <p>&#169; 2021 Copyright </p>
+      </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
 </body>
 </html>

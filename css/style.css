@@ -42,6 +42,43 @@ body {
   font-family: 'Roboto';
   font-weight: 300;
 }
+.arrow-down {
+  transform: rotate(270deg);
+  position: absolute;
+  top: 90%;
+  left: 48%;
+  background: none;
+  border: none;
+}
+.arrow-down span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-bottom: 3px solid #ff3140;
+  border-left: 3px solid #ff3140;
+  margin: -2px;
+  animation: arrow-left 1s infinite;
+  float: left;
+}
+.arrow-left span:nth-child(2) {
+  animation-delay: -0.1s;
+}
+.arrow-left span:nth-child(3) {
+  animation-delay: -0.2s;
+}
+@keyframes arrow-left {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(0px, 0px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(0px, 0px);
+  }
+}
 .container-fluid {
   width: 100% !important;
   padding: 0!important;
@@ -69,42 +106,25 @@ nav li {
   border: 1px solid #ccc;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9) inset, 0 1px 3px rgba(0, 0, 0, 0.1);
   border-radius: 3px;
-  margin-left: 10px;
   font-size: 20px;
   font-weight: 500;
-}
-nav a {
-  padding: 13px;
-  text-decoration: none;
-  color: #333;
-  text-shadow: 0 1px #fff;
-  display: block;
 }
 .dropdown-menu {
   left: -40% !important;
 }
 .mydrop {
   width: auto!important;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
   height: auto;
   margin: 4px 5px;
   left: -40%;
+  cursor: pointer;
 }
 nav li:hover {
   background-color: #f4511e !important;
 }
-.dropdown-menu li:hover {
-  background-color: #f4511e !important;
-}
-.overlay {
-  position: relative;
-  min-height: 100%;
-  min-width: 100%;
-  left: 0;
-  top: 50%;
-  font-size: 7rem!important;
-}
+
 .sign {
   background: url('../image/unsplash2.jpg') no-repeat;
   background-attachment: fixed;
@@ -112,6 +132,14 @@ nav li:hover {
   background-position: center;
   width: 100%;
   height: 900px;
+}
+.sign_word {
+  position: relative;
+  min-height: 100%;
+  min-width: 100%;
+  left: 0;
+  top: 50%;
+  font-size: 7rem;
 }
 .sign_word h3 {
   font-family: 'Roboto';
@@ -134,32 +162,26 @@ nav li:hover {
 }
 #classes,
 #trainers {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+.item-2 {
+  display: flex;
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1fr 3fr;
-  grid-column-gap: 2px;
-  grid-row-gap: 2px;
-  padding: 100px 20px;
+  justify-content: space-evenly;
+  align-content: center;
 }
 .item-1,
-.tr-1 {
-  grid-column-start: 1;
-  grid-column-end: 5;
-  grid-row-start: 1;
-  grid-row-end: 2;
-  margin: 0 auto;
+.tr-1,
+.gal-1 {
+  display: inline-block;
+  position: relative;
+  padding: 50px 0;
 }
-.item-2,
-.tr-2 {
-  grid-column-start: 1;
-  grid-column-end: 5;
-  grid-row-start: 2;
-  grid-row-end: 3;
-  display: flex;
-  justify-content: center;
-}
-.item-1 h2 {
+.item-1 h2,
+.gal-1 h2 {
   font-family: 'Roboto';
   text-transform: uppercase;
   font-weight: bold;
@@ -175,9 +197,9 @@ nav li:hover {
   text-transform: none;
   opacity: 0.4;
   text-shadow: none;
-  position: relative;
-  top: -60%;
-  left: 0;
+  position: absolute;
+  top: 5px;
+  left: calc(50% - 150px);
 }
 .team {
   display: flex;
@@ -238,7 +260,7 @@ nav li:hover {
 .team h3:after {
   content: "";
   position: absolute;
-  bottom: 83%;
+  bottom: 87%;
   right: 12px;
   width: 30px;
   height: 20px;
@@ -298,6 +320,9 @@ nav li:hover {
   left: 0px;
   z-index: -1;
 }
+.tr-2 {
+  display: inline-flex;
+}
 .tr-1 h2 {
   font-family: 'Roboto';
   text-transform: uppercase;
@@ -314,9 +339,9 @@ nav li:hover {
   text-transform: none;
   opacity: 0.4;
   text-shadow: none;
-  position: relative;
-  left: 0;
-  top: -70%;
+  position: absolute;
+  left: calc(50% - 260px);
+  top: 0;
 }
 .card {
   width: 300px;
@@ -376,6 +401,7 @@ nav li:hover {
 #partner {
   display: block;
   height: 900px;
+  position: relative;
   background: linear-gradient(to bottom left, #ff0000 50%, #ffffff 50%);
 }
 .pr-1 {
@@ -403,12 +429,12 @@ nav li:hover {
   position: relative;
   margin-top: -122px;
 }
-.group-bt {
+.push {
   display: inline-flex;
   flex-direction: column;
   position: relative;
-  top: 40%;
-  left: 40%;
+  top: 31%;
+  left: calc(50% - 150px);;
 }
 a.button14 {
   text-decoration: none;
@@ -445,7 +471,7 @@ a.button13 {
   margin: 10px;
   outline: none;
   background: #fe6637 no-repeat;
-  background-image: linear-gradient(to left, #ffffff, #ffffff), linear-gradient(to left, #feffe8, #feffe8), linear-gradient(#fbfbfb, #fbfbfb);
+  background-image: linear-gradient(to left, #aaaaaa, #aaaaaa), linear-gradient(to left, #feffe8, #feffe8), linear-gradient(#fbfbfb, #fbfbfb);
   background-position: calc(0%) 0, calc(0%) 0, 0 0;
   background-size: 1px 100%, 1px 100%, auto auto;
   overflow: hidden;
@@ -474,7 +500,7 @@ a.button13::after {
 }
 a.button14:hover,
 a.button13:hover {
-  background-color: #f4511e !important;
+  background-color: #fdfd9f!important;
   background-image: linear-gradient(to left, #aaaaaa, #aaaaaa), linear-gradient(to left, #feffe8, #feffe8), linear-gradient(#ff0000 8c, #fdfd9f);
 }
 a.button14:active::before,
@@ -492,12 +518,12 @@ a.button13:active:after {
 }
 .partner-1 {
   top: -2%;
-  left: 10%;
+  left: calc(10% + 80px);
   outline: 4px solid #ff0000;
 }
 .partner-2 {
   top: -74%;
-  left: 68%;
+  left: calc(60% + 100px);
   outline: 4px solid #ff0000;
 }
 [class^="partner-"] img {
@@ -537,19 +563,27 @@ a.button13:active:after {
     filter: drop-shadow(5px 5px 6px #008000);
   }
 }
-#carouselExampleControls {
+.gal-1 .h-back {
+  font-size: 5rem;
+  text-transform: none;
+  opacity: 0.4;
+  text-shadow: none;
+  position: absolute;
+  top: 5px;
+  left: calc(50% - 180px);;
+}
+.gallery {
   background: linear-gradient(to top left, #ff0000 50%, #ffffff 50%);
-  padding-top: 50px!important;
-  padding-bottom: 50px!important;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
 }
 #map-container {
   height: 240px;
   width: 100%;
-  margin-top: 10px;
-  margin-bottom: 10px;
 }
 #myFooter {
-  padding-top: 20px;
   background-color: #fff;
 }
 .content {
@@ -626,19 +660,19 @@ a.button13:active:after {
     top: 31%;
     left: 36%;
   }
-  .partner-1 {
-    top: 3%;
-    left: 7%;
-    outline: 4px solid #ff0000;
-  }
-  .partner-2 {
-    top: -74%;
-    left: 65%;
-    outline: 4px solid #ff0000;
-  }
+
   .img-circle .circle-back {
     top: 17%;
-    left: 14%;
+    left: 20%;
+  }
+  .item-1 .h-back {
+    font-size: 5rem;
+    text-transform: none;
+    opacity: 0.4;
+    text-shadow: none;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 160px);
   }
 }
 @media screen and (min-width: 1123px) and (max-width: 1299px) {
@@ -653,15 +687,15 @@ a.button13:active:after {
   }
   .partner-1 {
     top: -4%;
-    left: 8%;
+    left: calc(0% + 80px);
   }
   .partner-2 {
     top: -74%;
-    left: 62%;
+    left: 64%;
   }
   .group-bt {
     top: 30%;
-    left: 36%;
+    right: calc(0% + 80px);
   }
 }
 @media screen and (min-width: 960px) and (max-width: 1124px) {
@@ -684,6 +718,7 @@ a.button13:active:after {
   .team {
     display: flex;
     width: 22%;
+    position: relative;
     margin-right: 1%;
     vertical-align: top;
     align-items: center;
@@ -789,7 +824,61 @@ a.button13:active:after {
     transform: scale(1.5);
   }
 }
-@media screen and (min-width: 480px) and (max-width: 959px) {
+@media screen and (min-width: 690px) and (max-width: 959px) {
+  .sign_word {
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    font-size: 4rem!important;
+  }
+    .img-circle .circle-back {
+        width: 240px;
+        height: 240px;
+        top: -1%;
+        left: calc(66% - 170px);
+    }
+    .img-circle {
+      position: relative;
+    }
+    .item-2 {
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    .team {
+      margin: 10px 0;
+      display: flex;
+      width: 45%;
+      position: relative;
+    }
+    .team p {
+      margin-top: 50px;
+    }
+
+    .arrow-down {
+        top: 92%;
+        left: 48%;
+    }
+    #partner {
+      display: none;
+    }
+    .tr-2 {
+      display: inline-flex;
+      flex-direction: column;
+  }
+  .card {
+    margin-bottom: 20px;
+  }
+  .gallery {
+    background: 0;
+    padding-top: 0;
+    padding-bottom: 20px!important;
+    display: flex;
+    flex-direction: column;
+}
+}
+@media screen and (min-width: 480px) and (max-width: 689px) {
   .item-1 .h-back {
     display: none;
   }
@@ -797,22 +886,22 @@ a.button13:active:after {
     display: none;
   }
   .sign {
-    height: 800px;
+    height: 900px;
   }
   .sign_word {
     font-family: 'Roboto', sans-serif;
     font-weight: normal;
-    font-size: 5rem;
+    font-size: 4rem;
   }
   nav li {
     height: auto;
     width: 100%;
   }
   .img-circle .circle-back {
-    width: 400px;
-    height: 400px;
-    top: 15%;
-    left: 19%;
+    width: 300px;
+    height: 300px;
+    top: calc(40% - 150px);
+    left: calc(50% - 150px);
   }
   .team p {
     padding-top: 25px;
@@ -823,13 +912,24 @@ a.button13:active:after {
   #classes,
   #trainers {
     width: 100%;
-    display: block;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 3fr;
-    grid-column-gap: 2px;
-    grid-row-gap: 2px;
+    display: flex;
     padding: 0;
-    margin-top: 50px!important;
+    margin-top: 20px!important;
+  }
+  .item-1, .tr-1, .gal-1 {
+    padding: 0;
+  }
+  .tr-2 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+  .gal-1 .h-back {
+    display: none;
+  }
+  .gallery {
+    background: 0;
+    padding-top: 0;
   }
   .item-1 .h-back {
     font-size: 5rem;
@@ -840,18 +940,17 @@ a.button13:active:after {
     margin-left: -9px;
     margin-top: -160px;
   }
-  .item-2,
-  .tr-2 {
+  .item-2 {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
   .team {
     margin: 10px 0;
     display: flex;
-    width: 70%;
+    width: 80%;
     background-color: #fff;
     color: #000;
     padding: 20px 0;
@@ -916,7 +1015,7 @@ a.button13:active:after {
     align-items: baseline;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (min-width: 280px) and (max-width: 479px) {
   .container {
     display: block;
   }
@@ -925,6 +1024,7 @@ a.button13:active:after {
   }
   #carouselExampleControls {
     background: none;
+    padding-bottom: 25px;
   }
   #navbarNavDropdown {
     padding: 10px 5px;
@@ -963,10 +1063,15 @@ a.button13:active:after {
     padding: 0;
     margin: 0 auto;
   }
-  .overlay {
-    left: 0;
-    top: 70%;
-  }
+
+  .sign_word {
+      left: 0;
+      top: 70%;
+    }
+    .arrow-down {
+      top: 90%;
+      left: 45%;
+    }
   .sign_word h3 {
     font-weight: 500!important;
     font-size: 40px!important;
@@ -978,8 +1083,8 @@ a.button13:active:after {
   #classes,
   #trainers {
     width: 90%;
-    display: block;
-    padding: 10px 20px;
+    display: flex;
+    padding: 10px 0px;
     margin: 0 auto;
   }
   h2.h-back,
@@ -992,6 +1097,14 @@ a.button13:active:after {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+  }
+  .item-1 h2, .gal-1 h2, .tr-1 h2 {
+    font-size: 40px;
+  }
+  .item-1, .tr-1, .gal-1 {
+      display: inline-block;
+      position: relative;
+      padding: 25px 0;
   }
   .team {
     margin: 10px 0;
@@ -1009,23 +1122,39 @@ a.button13:active:after {
     justify-content: space-around;
     flex-wrap: nowrap;
   }
-  .circle-back {
-    width: 150px!important;
-    height: 150px!important;
+  .img-circle {
+    position: relative;
+  }
+  .img-circle .circle-back {
+    width: 190px!important;
+    height: 190px!important;
     border-radius: 50%;
     background-image: linear-gradient(#ff0000, #ffd400);
     box-shadow: 4px 4px 6px 3px rgba(0, 0, 0, 0.12);
     position: absolute;
     opacity: 0.2;
-    top: 20%!important;
-    left: 20%!important;
+    top: calc(40% - 60px)!important;
+    left: calc(40% - 60px)!important;
   }
   #trainers::before {
     content: none;
   }
-  #partner,
-  #gallery {
+  .item-2, .tr-2 {
+      width: 90%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 auto;
+  }
+  #partner  {
     display: none;
+  }
+  .gallery {
+    background: 0;
+  }
+  div.w-75 {
+    width: 90%!important;
   }
   .card {
     margin-bottom: 15px;
@@ -1103,10 +1232,9 @@ a.button13:active:after {
     font-weight: normal;
   }
   .content {
-    flex: 1 1 auto;
     min-height: auto;
     width: 100%;
-    padding: 0;
+    padding-top: 20px;
   }
   .social-logo {
     width: 90%;

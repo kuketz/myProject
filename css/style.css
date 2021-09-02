@@ -45,7 +45,7 @@ body {
 .arrow-down {
   transform: rotate(270deg);
   position: absolute;
-  top: 90%;
+  top: 95%;
   left: 48%;
   background: none;
   border: none;
@@ -80,7 +80,6 @@ body {
   }
 }
 .container-fluid {
-  width: 100% !important;
   padding: 0!important;
 }
 nav {
@@ -121,10 +120,9 @@ nav li {
   left: -40%;
   cursor: pointer;
 }
-nav li:hover {
+nav li:hover, nav a:hover {
   background-color: #f4511e !important;
 }
-
 .sign {
   background: url('../image/unsplash2.jpg') no-repeat;
   background-attachment: fixed;
@@ -871,12 +869,31 @@ a.button13:active:after {
     margin-bottom: 20px;
   }
   .gallery {
-    background: 0;
-    padding-top: 0;
-    padding-bottom: 20px!important;
+      background: 0;
+      padding-top: 0;
+      padding-bottom: 20px!important;
+      display: flex;
+      flex-direction: column;
+  }
+  nav li {
+    height: auto;
+    width: 100%;
+    margin-left: 4px;
+    font-size: 15px;
+  }
+  nav {
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
     display: flex;
-    flex-direction: column;
-}
+    justify-content: center;
+    top: 0;
+    right: 0;
+  }
+  nav ul {
+    padding: 0;
+    margin: 0 auto;
+  }
 }
 @media screen and (min-width: 480px) and (max-width: 689px) {
   .item-1 .h-back {
@@ -1002,7 +1019,7 @@ a.button13:active:after {
   #g {
     display: none;
   }
-  #myFooter > div.content > div > div.col-sm-3 {
+  .colhide {
     display: none;
   }
   .social-logo {
@@ -1063,7 +1080,6 @@ a.button13:active:after {
     padding: 0;
     margin: 0 auto;
   }
-
   .sign_word {
       left: 0;
       top: 70%;

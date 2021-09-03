@@ -496,16 +496,27 @@ a.button13::after {
   font-weight: 700;
   font-size: 140%;
 }
-a.button14:hover,
-a.button13:hover {
-  background-color: #fdfd9f!important;
-  background-image: linear-gradient(to left, #aaaaaa, #aaaaaa), linear-gradient(to left, #feffe8, #feffe8), linear-gradient(#ff0000 8c, #fdfd9f);
+a.button14:hover, a.button13:hover {
+  background-color: #fdfd9f;
+  background-image:
+   linear-gradient(to left, #aaa, #aaa),
+   linear-gradient(to left, #feffe8, #feffe8),
+   linear-gradient(#ff00008c, #fdfd9f);
 }
 a.button14:active::before,
 a.button13:active:after {
   bottom: -1.2em;
   transition: .3s;
 }
+/* .btn {
+    border: none;
+    outline: none;
+    outline: 0!important;
+    outline-color: transparent!important;
+    outline-width: 0!important;
+    outline-style: none!important;
+    box-shadow: 0 0 0 0 rgba(0,123,255,0)!important;
+    } */
 [class^="partner-"] {
   display: flex;
   position: relative;

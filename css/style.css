@@ -45,7 +45,7 @@ body {
 .arrow-down {
   transform: rotate(270deg);
   position: absolute;
-  top: 95%;
+  top: 94%;
   left: 48%;
   background: none;
   border: none;
@@ -129,7 +129,7 @@ nav li:hover, nav a:hover {
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 900px;
+  height: 960px;
 }
 .sign_word {
   position: relative;
